@@ -9,6 +9,7 @@ namespace TestGame;
 public class Game1 : Game
 {
     private Ball _ball;
+    private Science _science;
     
     private readonly GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
@@ -23,6 +24,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         InitBall();
+        InitScience();
 
         base.Initialize();
     }
@@ -32,6 +34,8 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         _ball.SetTexture(Content.Load<Texture2D>("ball-pixel"));
+        _science.SetTexture(Content.Load<Texture2D>("science-pixel"));
+        _science.SetPosition(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
     }
 
     protected override void Update(GameTime gameTime)
@@ -40,6 +44,11 @@ public class Game1 : Game
             || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+        if (_science.isDestroyed())
+        {
+            _science.SetPosition(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+        }
+        
         SetKeyboard(gameTime);
         SetBounds();
 
@@ -50,6 +59,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.Tan);
 
+        DrawScience();
         DrawBall();
 
         base.Draw(gameTime);
@@ -91,6 +101,8 @@ public class Game1 : Game
         {
             ballPos.X -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
+
+        _ball.SetPosition(ballPos);
     }
 
     private void SetBounds()
@@ -122,9 +134,14 @@ public class Game1 : Game
         var ballPos = new Vector2((float)_graphics.PreferredBackBufferWidth / 2,
             (float)_graphics.PreferredBackBufferHeight / 2);
         const float ballSpeed = 300f, ballScale = 0.1f;
-        var ballDiagonalSpeed = (float)Math.Sqrt(Math.Pow(_ball.GetSpeed(), 2) * 2) / 2;
+        var ballDiagonalSpeed = (float)Math.Sqrt(Math.Pow(ballSpeed, 2) * 2) / 2;
         
         _ball = new Ball(ballPos, ballSpeed, ballDiagonalSpeed, ballScale);
+    }
+
+    private void InitScience()
+    {
+        _science = new Science(100f, 0.05f);
     }
 
     private void DrawBall()
@@ -133,8 +150,19 @@ public class Game1 : Game
         var origin = new Vector2((float)ballTexture.Width / 2, (float)ballTexture.Height / 2);
 
         _spriteBatch.Begin();
-        _spriteBatch.Draw(ballTexture, _ball.GetPosition(), null, Color.White, 0f, 
-            origin, Vector2.One*_ball.GetScale(), SpriteEffects.None, 0f);
+        _spriteBatch.Draw(ballTexture, _ball.GetPosition(), null, Color.White, 0f, origin, 
+            Vector2.One*_ball.GetScale(), SpriteEffects.None, 0f);
+        _spriteBatch.End();
+    }
+
+    private void DrawScience()
+    {
+        var scienceTexture = _science.GetTexture();
+        var origin = new Vector2((float)scienceTexture.Width / 2, (float)scienceTexture.Height / 2);
+        
+        _spriteBatch.Begin();
+        _spriteBatch.Draw(scienceTexture, _science.GetPosition(), null, Color.White, 0f, origin, 
+            Vector2.One*_science.GetScale(), SpriteEffects.None, 0f);
         _spriteBatch.End();
     }
 }

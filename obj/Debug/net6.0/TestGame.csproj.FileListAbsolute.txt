@@ -25,3 +25,4 @@ C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.
 C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\ref\TestGame.dll
 C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\Content\ball.xnb
 C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\Content\ball-pixel.xnb
+C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\Content\science-pixel.xnb

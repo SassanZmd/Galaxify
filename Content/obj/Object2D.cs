@@ -9,13 +9,14 @@ public class Object2D
     private Vector2 _position;
     private float _speed;
     private float _scale;
+    private bool _destroyed;
 
     public void SetTexture(Texture2D texture)
     {
         _texture = texture;
     }
 
-    protected void SetPosition(Vector2 pos)
+    public void SetPosition(Vector2 pos)
     {
         _position = pos;
     }
@@ -28,6 +29,11 @@ public class Object2D
     protected void SetScale(float scale)
     {
         _scale = scale;
+    }
+
+    protected void SelfDestruct()
+    {
+        _destroyed = true;
     }
 
     public Texture2D GetTexture()
@@ -48,5 +54,10 @@ public class Object2D
     public float GetScale()
     {
         return _scale;
+    }
+    
+    public bool isDestroyed()
+    {
+        return _destroyed;
     }
 }

@@ -6,12 +6,13 @@ public class Ball : Object2D
 {
     private float _diagonalSpeed;
 
-    public Ball(Vector2 pos, float speed, float diagonalSpeed, float scale)
+    public Ball(Vector2 pos, float speed, float diagonalSpeed, float scale, float collOffset)
     {
         SetPosition(pos);
         SetSpeed(speed);
         SetDiagonalSpeed(diagonalSpeed);
         SetScale(scale);
+        SetCollisionOffset(collOffset);
     }
 
     private void SetDiagonalSpeed(float diagonalSpeed)

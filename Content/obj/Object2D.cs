@@ -10,6 +10,7 @@ public class Object2D
     private float _speed;
     private float _scale;
     private bool _destroyed;
+    private float _collisionOffset;
 
     public void SetTexture(Texture2D texture)
     {
@@ -31,7 +32,12 @@ public class Object2D
         _scale = scale;
     }
 
-    protected void SelfDestruct()
+    protected void SetCollisionOffset(float collOffset)
+    {
+        _collisionOffset = collOffset;
+    }
+
+    public void SelfDestruct()
     {
         _destroyed = true;
     }
@@ -55,9 +61,40 @@ public class Object2D
     {
         return _scale;
     }
+
+    public float GetCollisionOffset()
+    {
+        return _collisionOffset;
+    }
     
-    public bool isDestroyed()
+    public bool IsDestroyed()
     {
         return _destroyed;
+    }
+
+    public bool Collision(Object2D obj)
+    {
+        var pos = obj.GetPosition();
+        var texture = obj.GetTexture();
+        var width = texture.Width;
+        var height = texture.Height;
+        var collOffset = obj.GetCollisionOffset();
+
+        var leftPoint = _position.X - (float)_texture.Width / 2 * _scale + _collisionOffset;
+        var rightPoint = _position.X + (float)_texture.Width / 2 * _scale - _collisionOffset;
+        var topPoint = _position.Y - (float)_texture.Height / 2 * _scale + _collisionOffset;
+        var bottomPoint = _position.Y + (float)_texture.Height / 2 * _scale - _collisionOffset;
+        var objLeftPoint = pos.X - (float)width / 2 * obj.GetScale() + collOffset;
+        var objRightPoint = pos.X + (float)width / 2 * obj.GetScale() - collOffset;
+        var objTopPoint = pos.Y - (float)height / 2 * obj.GetScale() + collOffset;
+        var objBottomPoint = pos.Y + (float)height / 2 * obj.GetScale() - collOffset;
+
+        return !(leftPoint > objRightPoint || rightPoint < objLeftPoint) 
+               && !(topPoint > objBottomPoint || bottomPoint < objTopPoint);
+    }
+
+    protected void ResetDestruction()
+    {
+        _destroyed = false;
     }
 }

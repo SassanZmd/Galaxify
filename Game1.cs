@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Content.obj;
+using static TestGame.Content.obj.Config;
 
 namespace TestGame;
 
@@ -10,13 +11,14 @@ public class Game1 : Game
 {
     private Ball _ball;
     private Science _science;
-    
-    private readonly GraphicsDeviceManager _graphics;
+
     private SpriteBatch _spriteBatch;
 
     public Game1()
     {
-        _graphics = new GraphicsDeviceManager(this);
+        var graphics = new GraphicsDeviceManager(this);
+        graphics.PreferredBackBufferWidth = ResolutionWidth;
+        graphics.PreferredBackBufferHeight = ResolutionHeight;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -35,7 +37,7 @@ public class Game1 : Game
 
         _ball.SetTexture(Content.Load<Texture2D>("ball-pixel"));
         _science.SetTexture(Content.Load<Texture2D>("science-pixel"));
-        _science.SetPosition(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+        _science.Spawn(_ball);
     }
 
     protected override void Update(GameTime gameTime)
@@ -44,13 +46,18 @@ public class Game1 : Game
             || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        if (_science.isDestroyed())
+        if (_science.IsDestroyed())
         {
-            _science.SetPosition(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+            _science.DelayedSpawn(_ball);
         }
         
         SetKeyboard(gameTime);
         SetBounds();
+
+        if (_ball.Collision(_science))
+        {
+            _science.SelfDestruct();
+        }
 
         base.Update(gameTime);
     }
@@ -111,37 +118,35 @@ public class Game1 : Game
         var ballTexture = _ball.GetTexture();
         var ballScale = _ball.GetScale();
         
-        if (ballPos.X > _graphics.PreferredBackBufferWidth - ballTexture.Width * ballScale/5)
+        if (ballPos.X > ResolutionWidth - ballTexture.Width * ballScale/2)
         {
-            ballPos.X = _graphics.PreferredBackBufferWidth - ballTexture.Width * ballScale/5;
+            ballPos.X = ResolutionWidth - ballTexture.Width * ballScale/2;
         }
-        if (ballPos.X < (float)ballTexture.Width/5 * ballScale)
+        if (ballPos.X < (float)ballTexture.Width/2 * ballScale)
         {
-            ballPos.X = (float)ballTexture.Width/5 * ballScale;
+            ballPos.X = (float)ballTexture.Width/2 * ballScale;
         }
-        if (ballPos.Y > _graphics.PreferredBackBufferHeight - (float)ballTexture.Height/5 * ballScale + 5)
+        if (ballPos.Y > ResolutionHeight - (float)ballTexture.Height/2 * ballScale)
         {
-            ballPos.Y = _graphics.PreferredBackBufferHeight - (float)ballTexture.Height/5 * ballScale + 5;
+            ballPos.Y = ResolutionHeight - (float)ballTexture.Height/2 * ballScale;
         }
-        if (ballPos.Y < (float)ballTexture.Height/5 * ballScale + 5)
+        if (ballPos.Y < (float)ballTexture.Height/2 * ballScale)
         {
-            ballPos.Y = (float)ballTexture.Height/5 * ballScale + 5;
+            ballPos.Y = (float)ballTexture.Height/2 * ballScale;
         }
+        
+        _ball.SetPosition(ballPos);
     }
 
     private void InitBall()
     {
-        var ballPos = new Vector2((float)_graphics.PreferredBackBufferWidth / 2,
-            (float)_graphics.PreferredBackBufferHeight / 2);
-        const float ballSpeed = 300f, ballScale = 0.1f;
-        var ballDiagonalSpeed = (float)Math.Sqrt(Math.Pow(ballSpeed, 2) * 2) / 2;
-        
-        _ball = new Ball(ballPos, ballSpeed, ballDiagonalSpeed, ballScale);
+        _ball = new Ball(BallPos, BallSpeed, BallDiagonalSpeed, BallScale, 
+            BallCollisionOffset);
     }
 
     private void InitScience()
     {
-        _science = new Science(100f, 0.05f);
+        _science = new Science(ScienceSpeed, ScienceScale, ScienceCollisionOffset);
     }
 
     private void DrawBall()

@@ -62,7 +62,7 @@ public class Object2D
         return _scale;
     }
 
-    public float GetCollisionOffset()
+    private float GetCollisionOffset()
     {
         return _collisionOffset;
     }

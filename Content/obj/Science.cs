@@ -7,13 +7,13 @@ namespace TestGame.Content.obj;
 
 public class Science : Object2D
 {
-    private Ball tempBall;
+    private Ball _tempBall;
     
-    public Science(float speed, float scale, float collOffset)
+    public Science()
     {
-        SetSpeed(speed);
-        SetScale(scale);
-        SetCollisionOffset(collOffset);
+        SetSpeed(ScienceSpeed);
+        SetScale(ScienceScale);
+        SetCollisionOffset(ScienceCollisionOffset);
     }
 
     private void SetPosition(int resWidth, int resHeight)
@@ -46,7 +46,7 @@ public class Science : Object2D
     {
         ResetDestruction();
         SetPosition(new Vector2(-100, -100));
-        tempBall = ball;
+        _tempBall = ball;
         var thread = new Thread(SpawnThread);
         thread.Start();
     }
@@ -54,6 +54,6 @@ public class Science : Object2D
     private void SpawnThread()
     {
         Thread.Sleep(ScienceDelayMs);
-        Spawn(tempBall);
+        Spawn(_tempBall);
     }
 }

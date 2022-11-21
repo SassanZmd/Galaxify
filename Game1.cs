@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Content.obj;
@@ -11,6 +10,7 @@ public class Game1 : Game
 {
     private Ball _ball;
     private Science _science;
+    private Politics _politics;
 
     private SpriteBatch _spriteBatch;
 
@@ -25,8 +25,9 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        InitBall();
-        InitScience();
+        _ball = new Ball();
+        _science = new Science();
+        _politics = new Politics();
 
         base.Initialize();
     }
@@ -35,9 +36,10 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-        _ball.SetTexture(Content.Load<Texture2D>("ball-pixel"));
-        _science.SetTexture(Content.Load<Texture2D>("science-pixel"));
+        _ball.SetTexture(Content.Load<Texture2D>(BallTexture));
+        _science.SetTexture(Content.Load<Texture2D>(ScienceTexture));
         _science.Spawn(_ball);
+        _politics.SetTexture(Content.Load<Texture2D>(PoliticsTexture));
     }
 
     protected override void Update(GameTime gameTime)
@@ -64,7 +66,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.Tan);
+        GraphicsDevice.Clear(BackgroundColor);
 
         DrawScience();
         DrawBall();
@@ -136,17 +138,6 @@ public class Game1 : Game
         }
         
         _ball.SetPosition(ballPos);
-    }
-
-    private void InitBall()
-    {
-        _ball = new Ball(BallPos, BallSpeed, BallDiagonalSpeed, BallScale, 
-            BallCollisionOffset);
-    }
-
-    private void InitScience()
-    {
-        _science = new Science(ScienceSpeed, ScienceScale, ScienceCollisionOffset);
     }
 
     private void DrawBall()

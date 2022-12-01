@@ -107,11 +107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\TestGame.csproj",
-      "projectName": "TestGame",
-      "projectPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\TestGame.csproj",
+      "projectUniqueName": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\Galaxify\\Galaxify.csproj",
+      "projectName": "Galaxify",
+      "projectPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\Galaxify\\Galaxify.csproj",
       "packagesPath": "C:\\Users\\sassan.zomorodi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\obj\\",
+      "outputPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\Galaxify\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sassan.zomorodi\\AppData\\Roaming\\NuGet\\NuGet.Config",

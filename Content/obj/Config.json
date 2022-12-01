@@ -1,0 +1,31 @@
+{
+  "graphics": {
+    "resolutionWidth": 720,
+    "resolutionHeight": 480,
+    "backgroundColor": "Tan"
+  },
+  "timer": {
+    "timerUpdateIntervalMs": 50,
+    "timerStartValue": 0
+  },
+  "ball": {
+    "ballTexture": "ball-pixel",
+    "ballSpeed": 300,
+    "ballScale": 0.1,
+    "ballCollisionOffset": 10
+  },
+  "science": {
+    "scienceTexture": "science-pixel",
+    "scienceSpeed": 100,
+    "scienceScale": 0.05,
+    "scienceCollisionOffset": 10,
+    "scienceDelayMs": 100
+  },
+  "politics": {
+    "politicsTexture": "politics-pixel",
+    "politicsSpeed": 100,
+    "politicsScale": 0.05,
+    "politicsCollisionOffset": 10,
+    "politicsDelayMs": 5000
+  }
+}

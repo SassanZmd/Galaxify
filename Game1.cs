@@ -8,6 +8,7 @@ namespace TestGame;
 
 public class Game1 : Game
 {
+    private Timer _timer;
     private Ball _ball;
     private Science _science;
     private Politics _politics;
@@ -25,6 +26,7 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
+        _timer = new Timer();
         _ball = new Ball();
         _science = new Science();
         _politics = new Politics();
@@ -46,7 +48,7 @@ public class Game1 : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed 
             || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
+            Quit();
 
         if (_science.IsDestroyed())
         {
@@ -138,6 +140,12 @@ public class Game1 : Game
         }
         
         _ball.SetPosition(ballPos);
+    }
+
+    private void Quit()
+    {
+        _timer.Stop();
+        Exit();
     }
 
     private void DrawBall()

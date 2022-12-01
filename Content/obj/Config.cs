@@ -1,14 +1,23 @@
 ﻿using System;
+using System.IO;
+using System.Text.Json.Nodes;
 using Microsoft.Xna.Framework;
 
 namespace TestGame.Content.obj;
 
-public static class Config
+public class Config
 {
+    // Config file defaults
+    private const string ConfigFileAddress = "Config.json";
+    
     // Graphics config
     public const int ResolutionWidth = 720;
     public const int ResolutionHeight = 480;
     public static Color BackgroundColor { get; } = Color.Tan;
+
+    // Timer Config
+    public const int TimerUpdateIntervalMs = 50;
+    public static double TimerStartValue { get; set; }
 
     // Ball sprite config
     public const string BallTexture = "ball-pixel";
@@ -31,4 +40,11 @@ public static class Config
     public const float PoliticsScale = 0.05f;
     public const float PoliticsCollisionOffset = 10f;
     public const int PoliticsDelayMs = 5000;
+
+    public Config()
+    {
+        var json = JsonNode.Parse(File.ReadAllText(ConfigFileAddress));
+        if (json is not JsonObject) throw new Exception("Invalid config file address");
+        
+    }
 }

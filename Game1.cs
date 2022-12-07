@@ -2,12 +2,14 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Content.obj;
-using static TestGame.Content.obj.Config;
+using TestGame.Content.obj.Config;
 
 namespace TestGame;
 
 public class Game1 : Game
 {
+    private Config _config;
+    private Graphics _graphicsConfig;
     private Timer _timer;
     private Ball _ball;
     private Science _science;
@@ -17,20 +19,22 @@ public class Game1 : Game
 
     public Game1()
     {
+        _config = new Config();
         var graphics = new GraphicsDeviceManager(this);
-        graphics.PreferredBackBufferWidth = ResolutionWidth;
-        graphics.PreferredBackBufferHeight = ResolutionHeight;
+        _graphicsConfig = _config.GetGraphics();
+        (graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight) = _graphicsConfig.GetResolution();
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
 
     protected override void Initialize()
     {
-        _timer = new Timer();
-        _ball = new Ball();
-        _science = new Science();
-        _politics = new Politics();
+        _timer = _config.GetTimer();
+        _ball = _config.GetBall();
+        _science = _config.GetScience();
+        _politics = _config.GetPolitics();
 
+        _timer.Start();
         base.Initialize();
     }
 
@@ -38,10 +42,15 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-        _ball.SetTexture(Content.Load<Texture2D>(BallTexture));
-        _science.SetTexture(Content.Load<Texture2D>(ScienceTexture));
+        var ballTextureName = _ball.GetTextureName();
+        _ball.SetTexture(Content.Load<Texture2D>(ballTextureName));
+
+        var scienceTextureName = _science.GetTextureName();
+        _science.SetTexture(Content.Load<Texture2D>(scienceTextureName));
         _science.Spawn(_ball);
-        _politics.SetTexture(Content.Load<Texture2D>(PoliticsTexture));
+
+        var politicsTextureName = _politics.GetTextureName();
+        _politics.SetTexture(Content.Load<Texture2D>(politicsTextureName));
     }
 
     protected override void Update(GameTime gameTime)
@@ -68,7 +77,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(BackgroundColor);
+        GraphicsDevice.Clear(_graphicsConfig.GetColor());
 
         DrawScience();
         DrawBall();
@@ -121,18 +130,19 @@ public class Game1 : Game
         var ballPos = _ball.GetPosition();
         var ballTexture = _ball.GetTexture();
         var ballScale = _ball.GetScale();
+        var (resolutionWidth, resolutionHeight) = _graphicsConfig.GetResolution();
         
-        if (ballPos.X > ResolutionWidth - ballTexture.Width * ballScale/2)
+        if (ballPos.X > resolutionWidth - ballTexture.Width * ballScale/2)
         {
-            ballPos.X = ResolutionWidth - ballTexture.Width * ballScale/2;
+            ballPos.X = resolutionWidth - ballTexture.Width * ballScale/2;
         }
         if (ballPos.X < (float)ballTexture.Width/2 * ballScale)
         {
             ballPos.X = (float)ballTexture.Width/2 * ballScale;
         }
-        if (ballPos.Y > ResolutionHeight - (float)ballTexture.Height/2 * ballScale)
+        if (ballPos.Y > resolutionHeight - (float)ballTexture.Height/2 * ballScale)
         {
-            ballPos.Y = ResolutionHeight - (float)ballTexture.Height/2 * ballScale;
+            ballPos.Y = resolutionHeight - (float)ballTexture.Height/2 * ballScale;
         }
         if (ballPos.Y < (float)ballTexture.Height/2 * ballScale)
         {
@@ -145,6 +155,7 @@ public class Game1 : Game
     private void Quit()
     {
         _timer.Stop();
+        _config.SaveConfig();
         Exit();
     }
 

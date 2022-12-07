@@ -1,4 +1,4 @@
-﻿using static TestGame.Content.obj.Config;
+﻿using Microsoft.Xna.Framework;
 
 namespace TestGame.Content.obj;
 
@@ -6,13 +6,15 @@ public class Ball : Object2D
 {
     private float _diagonalSpeed;
 
-    public Ball()
+    public Ball(string textureName, Vector2 position, float speed, float scale, float diagonalSpeed, 
+        float ballCollOffset)
     {
-        SetPosition(BallPosition);
-        SetSpeed(BallSpeed);
-        SetDiagonalSpeed(BallDiagonalSpeed);
-        SetScale(BallScale);
-        SetCollisionOffset(BallCollisionOffset);
+        SetTextureName(textureName);
+        SetPosition(position);
+        SetSpeed(speed);
+        SetDiagonalSpeed(diagonalSpeed);
+        SetScale(scale);
+        SetCollisionOffset(ballCollOffset);
     }
 
     private void SetDiagonalSpeed(float diagonalSpeed)

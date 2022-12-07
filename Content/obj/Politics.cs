@@ -1,12 +1,27 @@
 ﻿namespace TestGame.Content.obj;
-using static Config;
+using static Config.Config;
 
 public class Politics : Object2D
 {
-    public Politics()
+    private int _delayMs;
+    
+    public Politics(string textureName, float speed, float scale, float collisionOffset, int delayMs)
     {
-        SetSpeed(PoliticsSpeed);
-        SetScale(PoliticsScale);
-        SetCollisionOffset(PoliticsCollisionOffset);
+        SetTextureName(textureName);
+        SetSpeed(speed);
+        SetScale(scale);
+        SetCollisionOffset(collisionOffset);
+
+        _delayMs = delayMs;
+    }
+
+    public void SetDelayMs(int delayMs)
+    {
+        _delayMs = delayMs;
+    }
+
+    public int GetDelayMs()
+    {
+        return _delayMs;
     }
 }

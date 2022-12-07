@@ -6,6 +6,7 @@ namespace TestGame.Content.obj;
 public class Object2D
 {
     private Texture2D _texture;
+    private string _textureName;
     private Vector2 _position;
     private float _speed;
     private float _scale;
@@ -15,6 +16,12 @@ public class Object2D
     public void SetTexture(Texture2D texture)
     {
         _texture = texture;
+        _textureName = texture.Name;
+    }
+
+    protected void SetTextureName(string textureName)
+    {
+        _textureName = textureName;
     }
 
     public void SetPosition(Vector2 pos)
@@ -46,6 +53,11 @@ public class Object2D
     {
         return _texture;
     }
+
+    public string GetTextureName()
+    {
+        return _textureName;
+    }
     
     public Vector2 GetPosition()
     {
@@ -62,7 +74,7 @@ public class Object2D
         return _scale;
     }
 
-    private float GetCollisionOffset()
+    public float GetCollisionOffset()
     {
         return _collisionOffset;
     }

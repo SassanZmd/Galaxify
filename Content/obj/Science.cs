@@ -1,19 +1,28 @@
 ﻿using System;
+using System.IO;
+using System.Text.Json.Nodes;
 using System.Threading;
 using Microsoft.Xna.Framework;
-using static TestGame.Content.obj.Config;
+using static TestGame.Content.obj.Config.Config;
 
 namespace TestGame.Content.obj;
 
 public class Science : Object2D
 {
     private Ball _tempBall;
-    
-    public Science()
+    private readonly (int width, int height) _resolution;
+    private int _delayMs;
+
+    public Science(string textureName, float speed, float scale, float collisionOffset, int delayMs, 
+        int resolutionWidth, int resolutionHeight)
     {
-        SetSpeed(ScienceSpeed);
-        SetScale(ScienceScale);
-        SetCollisionOffset(ScienceCollisionOffset);
+        SetTextureName(textureName);
+        SetSpeed(speed);
+        SetScale(scale);
+        SetCollisionOffset(collisionOffset);
+
+        _delayMs = delayMs;
+        _resolution = (resolutionWidth, resolutionHeight);
     }
 
     private void SetPosition(int resWidth, int resHeight)
@@ -34,11 +43,11 @@ public class Science : Object2D
     public void Spawn(Ball ball)
     {
         ResetDestruction();
-        SetPosition(ResolutionWidth, ResolutionHeight);
+        SetPosition(_resolution.width, _resolution.height);
         
         while (Collision(ball))
         {
-            SetPosition(ResolutionWidth, ResolutionHeight);
+            SetPosition(_resolution.width, _resolution.height);
         }
     }
 
@@ -53,7 +62,17 @@ public class Science : Object2D
 
     private void SpawnThread()
     {
-        Thread.Sleep(ScienceDelayMs);
+        Thread.Sleep(_delayMs);
         Spawn(_tempBall);
+    }
+
+    public void SetDelayMs(int delayMs)
+    {
+        _delayMs = delayMs;
+    }
+    
+    public int GetDelayMs()
+    {
+        return _delayMs;
     }
 }

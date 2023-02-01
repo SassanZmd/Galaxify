@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/ball-pixel.png","C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/bin/DesktopGL/Content/ball-pixel.xnb","TextureProcessor","Texture2DContent",4582,2609041,0.1852931
+"C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/loading-pixel.gif","C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/bin/DesktopGL/Content/loading-pixel.xnb","TextureProcessor","Texture2DContent",9372,147541,0.1210363
 "C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/politics-pixel.png","C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/bin/DesktopGL/Content/politics-pixel.xnb","TextureProcessor","Texture2DContent",8621,5429613,0.1209046
 "C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/science-pixel.png","C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/Galaxify/Content/bin/DesktopGL/Content/science-pixel.xnb","TextureProcessor","Texture2DContent",4710,2766789,0.0551382

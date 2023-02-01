@@ -1,5 +1,4 @@
 ﻿namespace TestGame.Content.obj;
-using static Config.Config;
 
 public class Politics : Object2D
 {

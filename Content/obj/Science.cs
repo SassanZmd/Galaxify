@@ -1,9 +1,6 @@
 ﻿using System;
-using System.IO;
-using System.Text.Json.Nodes;
 using System.Threading;
 using Microsoft.Xna.Framework;
-using static TestGame.Content.obj.Config.Config;
 
 namespace TestGame.Content.obj;
 

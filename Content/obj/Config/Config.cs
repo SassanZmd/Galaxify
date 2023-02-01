@@ -9,8 +9,10 @@ namespace TestGame.Content.obj.Config;
 public class Config
 {
     public bool FinishedLoading;
-    private JsonNode _configFileJson;
     
+    private string _loadingTextureName;
+    private JsonNode _configFileJson;
+
     // Config file defaults
     private const string ConfigFileAddress = "Config.json";
 
@@ -45,6 +47,11 @@ public class Config
         var color = System.Drawing.Color.FromName(json["graphics"]["backgroundColor"].GetValue<string>());
         var backgroundColor = new Color(color.R, color.G, color.B, color.A);
         _graphicsConfig = new Graphics(resolutionWidth, resolutionHeight, backgroundColor);
+        
+        // loading setup
+        if (json["loading"]?["loadingTexture"] == null)
+            throw new Exception("Invalid 'loading' configuration");
+        _loadingTextureName = json["loading"]["loadingTexture"].GetValue<string>();
         
         var thread = new Thread(LoadConfig);
         thread.Start();
@@ -106,6 +113,7 @@ public class Config
         _politics = new Politics(politicsTextureName, politicsSpeed, politicsScale, politicsCollisionOffset, 
             politicsDelayMs);
 
+        Thread.Sleep(10000);
         _configFileJson = json;
         FinishedLoading = true;
     }
@@ -143,6 +151,11 @@ public class Config
     public Graphics GetGraphics()
     {
         return _graphicsConfig;
+    }
+
+    public string GetLoadingTextureName()
+    {
+        return _loadingTextureName;
     }
 
     public Timer GetTimer()

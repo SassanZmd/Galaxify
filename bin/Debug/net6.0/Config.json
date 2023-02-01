@@ -4,6 +4,9 @@
     "resolutionHeight": 480,
     "backgroundColor": "Tan"
   },
+  "loading": {
+    "loadingTexture": "loading-pixel"
+  },
   "timer": {
     "timerUpdateIntervalMs": 50,
     "timerStartValue": 0

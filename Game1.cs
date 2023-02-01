@@ -1,8 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Threading;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Content.obj;
 using TestGame.Content.obj.Config;
+using Timer = TestGame.Content.obj.Timer;
 
 namespace TestGame;
 
@@ -14,6 +16,9 @@ public class Game1 : Game
     private Ball _ball;
     private Science _science;
     private Politics _politics;
+
+    private Texture2D _loadingTexture;
+    private bool _waitForLoading;
 
     private SpriteBatch _spriteBatch;
 
@@ -29,6 +34,12 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
+        if (!_config.FinishedLoading)
+        {
+            base.Initialize();
+            return;
+        }
+        
         _timer = _config.GetTimer();
         _ball = _config.GetBall();
         _science = _config.GetScience();
@@ -41,6 +52,13 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+        if (!_config.FinishedLoading)
+        {
+            var loadingTextureName = _config.GetLoadingTextureName();
+            _loadingTexture = Content.Load<Texture2D>(loadingTextureName);
+            return;
+        }
 
         var ballTextureName = _ball.GetTextureName();
         _ball.SetTexture(Content.Load<Texture2D>(ballTextureName));
@@ -58,6 +76,19 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed 
             || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Quit();
+
+        if (!_config.FinishedLoading)
+        {
+            _waitForLoading = true;
+            return;
+        }
+
+        if (_waitForLoading)
+        {
+            _waitForLoading = false;
+            Initialize();
+            LoadContent();
+        }
 
         if (_science.IsDestroyed())
         {
@@ -77,6 +108,15 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
+        if (!_config.FinishedLoading)
+        {
+            GraphicsDevice.Clear(Color.Black);
+            DrawLoading();
+            
+            base.Draw(gameTime);
+            return;
+        }
+        
         GraphicsDevice.Clear(_graphicsConfig.GetColor());
 
         DrawScience();
@@ -178,6 +218,18 @@ public class Game1 : Game
         _spriteBatch.Begin();
         _spriteBatch.Draw(scienceTexture, _science.GetPosition(), null, Color.White, 0f, origin, 
             Vector2.One*_science.GetScale(), SpriteEffects.None, 0f);
+        _spriteBatch.End();
+    }
+
+    private void DrawLoading()
+    {
+        var (resolutionWidth, resolutionHeight) = _graphicsConfig.GetResolution();
+        var origin = new Vector2((float)_loadingTexture.Width / 2, (float)_loadingTexture.Height / 2);
+        
+        _spriteBatch.Begin();
+        _spriteBatch.Draw(_loadingTexture, 
+            new Vector2((float)resolutionWidth / 2, (float)resolutionHeight / 2), null, 
+            Color.White, 0f, origin, Vector2.One*1.5f, SpriteEffects.None, 0f);
         _spriteBatch.End();
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Collections.Generic;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -10,15 +11,16 @@ namespace TestGame;
 
 public class Game1 : Game
 {
-    private Config _config;
-    private Graphics _graphicsConfig;
+    private readonly Config _config;
+    private readonly Graphics _graphicsConfig;
     private Timer _timer;
     private Ball _ball;
     private Science _science;
     private Politics _politics;
 
-    private Texture2D _loadingTexture;
+    private List<Texture2D> _loadingTextureList;
     private bool _waitForLoading;
+    private int _frameCounter;
 
     private SpriteBatch _spriteBatch;
 
@@ -55,8 +57,13 @@ public class Game1 : Game
 
         if (!_config.FinishedLoading)
         {
+            _loadingTextureList = new List<Texture2D>();
             var loadingTextureName = _config.GetLoadingTextureName();
-            _loadingTexture = Content.Load<Texture2D>(loadingTextureName);
+            var loadingTextureFrames = _config.GetLoadingTextureFrames();
+            for (var i = 1; i <= loadingTextureFrames; i++)
+            {
+                _loadingTextureList.Add(Content.Load<Texture2D>(loadingTextureName + "-" + i));
+            }
             return;
         }
 
@@ -224,12 +231,18 @@ public class Game1 : Game
     private void DrawLoading()
     {
         var (resolutionWidth, resolutionHeight) = _graphicsConfig.GetResolution();
-        var origin = new Vector2((float)_loadingTexture.Width / 2, (float)_loadingTexture.Height / 2);
+        var origin = new Vector2((float)_loadingTextureList[0].Width / 2, (float)_loadingTextureList[0].Height / 2);
+
+        if (_frameCounter > 3) 
+            _frameCounter = 0;
         
         _spriteBatch.Begin();
-        _spriteBatch.Draw(_loadingTexture, 
+        _spriteBatch.Draw(_loadingTextureList[_frameCounter], 
             new Vector2((float)resolutionWidth / 2, (float)resolutionHeight / 2), null, 
-            Color.White, 0f, origin, Vector2.One*1.5f, SpriteEffects.None, 0f);
+            Color.White, 0f, origin, Vector2.One*0.25f, SpriteEffects.None, 0f);
         _spriteBatch.End();
+
+        _frameCounter++;
+        Thread.Sleep(100);
     }
 }

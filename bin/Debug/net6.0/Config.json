@@ -5,7 +5,8 @@
     "backgroundColor": "Tan"
   },
   "loading": {
-    "loadingTexture": "loading-pixel"
+    "loadingTexture": "loading-pixel",
+    "loadingTextureFrames": 4
   },
   "timer": {
     "timerUpdateIntervalMs": 50,

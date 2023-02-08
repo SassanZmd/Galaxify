@@ -10,7 +10,8 @@ public class Config
 {
     public bool FinishedLoading;
     
-    private string _loadingTextureName;
+    private readonly string _loadingTextureName;
+    private readonly int _loadingTextureFrames;
     private JsonNode _configFileJson;
 
     // Config file defaults
@@ -49,9 +50,10 @@ public class Config
         _graphicsConfig = new Graphics(resolutionWidth, resolutionHeight, backgroundColor);
         
         // loading setup
-        if (json["loading"]?["loadingTexture"] == null)
+        if (json["loading"]?["loadingTexture"] == null || json["loading"]["loadingTextureFrames"] == null)
             throw new Exception("Invalid 'loading' configuration");
         _loadingTextureName = json["loading"]["loadingTexture"].GetValue<string>();
+        _loadingTextureFrames = json["loading"]["loadingTextureFrames"].GetValue<int>();
         
         var thread = new Thread(LoadConfig);
         thread.Start();
@@ -156,6 +158,11 @@ public class Config
     public string GetLoadingTextureName()
     {
         return _loadingTextureName;
+    }
+
+    public int GetLoadingTextureFrames()
+    {
+        return _loadingTextureFrames;
     }
 
     public Timer GetTimer()

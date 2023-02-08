@@ -46,6 +46,7 @@
 /bin/Debug/net7.0/Content
 /bin/Debug/net7.0
 /bin/Debug/net6.0/Galaxify.runtimeconfig.json
+<<<<<<< HEAD
 /bin/Debug/net6.0/Galaxify.pdb
 /bin/Debug/net6.0/Galaxify.exe
 /bin/Debug/net6.0/Galaxify.deps.json
@@ -70,3 +71,12 @@
 /.vs/Galaxify/config
 /.vs/Galaxify
 /.vs
+=======
+/.idea/.idea.Galaxify.dir/.idea/workspace.xml
+/.idea/.idea.TestProject.dir/.idea/.name
+/.idea/.idea.TestProject.dir/.idea/encodings.xml
+/.idea/.idea.TestProject.dir/.idea/indexLayout.xml
+/.idea/.idea.TestProject.dir/.idea/projectSettingsUpdater.xml
+/.idea/.idea.TestProject.dir/.idea/vcs.xml
+/.idea/.idea.TestProject.dir/.idea/workspace.xml
+>>>>>>> Animated loading screen

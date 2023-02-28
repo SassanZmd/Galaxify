@@ -23,6 +23,8 @@ public class Game1 : Game
     private int _frameCounter;
 
     private SpriteBatch _spriteBatch;
+    private SpriteFont _font;
+    private RenderTarget2D _target;
 
     public Game1()
     {
@@ -76,6 +78,8 @@ public class Game1 : Game
 
         var politicsTextureName = _politics.GetTextureName();
         _politics.SetTexture(Content.Load<Texture2D>(politicsTextureName));
+
+        _font = Content.Load<SpriteFont>("font1");
     }
 
     protected override void Update(GameTime gameTime)
@@ -126,6 +130,7 @@ public class Game1 : Game
         
         GraphicsDevice.Clear(_graphicsConfig.GetColor());
 
+        DrawText();
         DrawScience();
         DrawBall();
 
@@ -244,5 +249,17 @@ public class Game1 : Game
 
         _frameCounter++;
         Thread.Sleep(100);
+    }
+
+    private void DrawText()
+    {
+        _spriteBatch.Begin();
+        // Finds the center of the string in coordinates inside the text rectangle
+        var textMiddlePoint = _font.MeasureString("Score") / 2;
+        // Places text in center of the screen
+        var position = new Vector2(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
+        _spriteBatch.DrawString(_font, "Score", position, Color.White, 0, textMiddlePoint,
+            1.0f, SpriteEffects.None, 0.5f);
+        _spriteBatch.End();
     }
 }

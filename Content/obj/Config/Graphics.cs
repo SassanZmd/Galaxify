@@ -1,4 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Drawing;
+using System;
+using Color = Microsoft.Xna.Framework.Color;
+using Color2 = System.Drawing.Color;
 
 namespace TestGame.Content.obj.Config;
 
@@ -27,9 +31,17 @@ public class Graphics
     
     public string GetColorName()
     {
-        var color = System.Drawing.Color.FromArgb(_backgroundColor.A, _backgroundColor.R,
-            _backgroundColor.G, _backgroundColor.B);
-        return color.Name;
+        string defaultName = "Unknown";
+        foreach (KnownColor kc in Enum.GetValues(typeof(KnownColor)))
+        {
+            var known = Color2.FromKnownColor(kc);
+            if (_backgroundColor.A == known.A && _backgroundColor.R == known.R && _backgroundColor.B == known.B && _backgroundColor.G == known.G)
+            {
+                return known.Name;
+            }
+        }
+
+        return defaultName;
     }
 
     public void SetResolution(int width, int height)

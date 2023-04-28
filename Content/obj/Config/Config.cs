@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Text.Json.Nodes;
 using System.Threading;
 using Microsoft.Xna.Framework;
@@ -122,6 +123,8 @@ public class Config
 
     public void SaveConfig()
     {
+        if (!FinishedLoading) return;
+
         var json = _configFileJson;
 
         (json["graphics"]!["resolutionWidth"], json["graphics"]["resolutionHeight"]) = _graphicsConfig.GetResolution();
@@ -133,7 +136,7 @@ public class Config
         json["ball"]!["ballTexture"] = _ball.GetTextureName();
         json["ball"]["ballSpeed"] = _ball.GetSpeed();
         json["ball"]["ballScale"] = _ball.GetScale();
-        json["ball"]["balCollisionOffset"] = _ball.GetCollisionOffset();
+        json["ball"]["ballCollisionOffset"] = _ball.GetCollisionOffset();
 
         json["science"]!["scienceTexture"] = _science.GetTextureName();
         json["science"]["scienceSpeed"] = _science.GetSpeed();
@@ -147,7 +150,34 @@ public class Config
         json["politics"]["politicsCollisionOffset"] = _politics.GetCollisionOffset();
         json["politics"]["politicsDelayMs"] = _politics.GetDelayMs();
 
-        File.WriteAllText("Config.json", json.ToJsonString());
+        var jsonString = json.ToJsonString();
+        var formattedString = FormatJsonString(jsonString);
+
+        File.WriteAllText("Config.json", formattedString);
+    }
+
+    public string FormatJsonString(string jsonString)
+    {
+        var newString = "";
+        var tabnr = 0;
+
+        for (int i = 0; i < jsonString.Length; i++)
+        {
+            newString += jsonString[i];
+            if (i == jsonString.Length - 1) continue;
+            if ((jsonString[i] is ',' or '{' || jsonString[i + 1] is '}') || (jsonString[i] is '}' && jsonString[i + 1] is not ','))
+                newString += "\r\n";
+            else if (jsonString[i] == ':')
+                newString += ' ';
+            if (jsonString[i] is '{' && jsonString[i + 1] is not '}')
+                newString += String.Concat(Enumerable.Repeat('\t', ++tabnr));
+            else if (jsonString[i + 1] is '}')
+                newString += String.Concat(Enumerable.Repeat('\t', --tabnr));
+            else if (newString.EndsWith('\n'))
+                newString += String.Concat(Enumerable.Repeat('\t', tabnr));
+        }
+
+        return newString;
     }
 
     public Graphics GetGraphics()

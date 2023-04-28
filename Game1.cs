@@ -38,6 +38,7 @@ public class Game1 : Game
     {
         if (!_config.FinishedLoading)
         {
+            _timer = new Timer(0, 0);
             base.Initialize();
             return;
         }

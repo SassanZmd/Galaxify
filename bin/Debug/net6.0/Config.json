@@ -10,7 +10,7 @@
 	},
 	"timer": {
 		"timerUpdateIntervalMs": 50,
-		"timerStartValue": 4.249999999999993
+		"timerStartValue": 0
 	},
 	"ball": {
 		"ballTexture": "ball-pixel",

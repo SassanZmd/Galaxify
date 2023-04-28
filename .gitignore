@@ -43,3 +43,4 @@
 /obj/Galaxify.csproj.nuget.g.props
 /obj/project.assets.json
 /obj/project.nuget.cache
+/obj/Release/net6.0

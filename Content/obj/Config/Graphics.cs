@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Drawing;
+﻿using System.Drawing;
 using System;
 using Color = Microsoft.Xna.Framework.Color;
 using Color2 = System.Drawing.Color;

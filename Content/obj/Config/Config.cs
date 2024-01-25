@@ -116,7 +116,7 @@ public class Config
         _politics = new Politics(politicsTextureName, politicsSpeed, politicsScale, politicsCollisionOffset, 
             politicsDelayMs);
 
-        Thread.Sleep(10000);
+        //Thread.Sleep(10000);
         _configFileJson = json;
         FinishedLoading = true;
     }
@@ -131,7 +131,7 @@ public class Config
         json["graphics"]["backgroundColor"] = _graphicsConfig.GetColorName();
 
         json["timer"]!["timerUpdateIntervalMs"] = _timerConfig.GetTimerUpdateInterval();
-        json["timer"]["timerStartValue"] = _timerConfig.GetTimerStartValue();
+        json["timer"]["timerStartValue"] = _timerConfig.GetElapsedTime();
 
         json["ball"]!["ballTexture"] = _ball.GetTextureName();
         json["ball"]["ballSpeed"] = _ball.GetSpeed();

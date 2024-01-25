@@ -47,4 +47,9 @@ public class Timer
     {
         return _timerStartValue;
     }
+
+    public double GetElapsedTime()
+    {
+        return _elapsedTime;
+    }
 }

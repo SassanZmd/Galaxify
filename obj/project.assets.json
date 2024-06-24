@@ -102,31 +102,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sassan.zomorodi\\.nuget\\packages\\": {}
+    "C:\\Users\\zomossas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\TestGame.csproj",
+      "projectUniqueName": "C:\\Users\\zomossas\\OneDrive - Tietoevry\\Documents\\GitHub\\Galaxify\\TestGame.csproj",
       "projectName": "TestGame",
-      "projectPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\TestGame.csproj",
-      "packagesPath": "C:\\Users\\sassan.zomorodi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sassan.zomorodi\\Documents\\Monogame\\TestProject\\TestGame\\obj\\",
+      "projectPath": "C:\\Users\\zomossas\\OneDrive - Tietoevry\\Documents\\GitHub\\Galaxify\\TestGame.csproj",
+      "packagesPath": "C:\\Users\\zomossas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zomossas\\OneDrive - Tietoevry\\Documents\\GitHub\\Galaxify\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sassan.zomorodi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\zomossas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/hmasw/index.json": {},
-        "https://nuget.pkg.github.com/outkit/index.json": {},
-        "https://nuget.telerik.com/nuget": {},
-        "https://www.myget.org/F/avalonia-ci/api/v2": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -138,6 +132,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -159,16 +158,35 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

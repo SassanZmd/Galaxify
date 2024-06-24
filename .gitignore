@@ -46,3 +46,7 @@
 /bin/Galaxify.dll
 /bin/Galaxify.deps.json
 /obj/Debug/net6.0
+obj/Debug/net6.0/TestGame.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net6.0/TestGame.csproj.AssemblyReference.cache
+obj/Debug/net6.0/TestGame.AssemblyInfoInputs.cache
+obj/Debug/net6.0/TestGame.AssemblyInfo.cs

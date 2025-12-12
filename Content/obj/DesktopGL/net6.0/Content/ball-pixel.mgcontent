@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/Content/ball-pixel.png</SourceFile>
-  <SourceTime>2024-06-24T11:00:24.2131042+02:00</SourceTime>
-  <DestFile>C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/Content/bin/DesktopGL/Content/ball-pixel.xnb</DestFile>
-  <DestTime>2024-06-24T11:12:10.8730346+02:00</DestTime>
+  <SourceFile>/home/sassan/Dropbox/Galaxify/Content/ball-pixel.png</SourceFile>
+  <SourceTime>2025-12-11T15:46:46.0903644+01:00</SourceTime>
+  <DestFile>/home/sassan/Dropbox/Galaxify/Content/bin/DesktopGL/Content/ball-pixel.xnb</DestFile>
+  <DestTime>2025-12-11T16:04:24.57273+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

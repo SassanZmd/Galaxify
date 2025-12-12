@@ -1,0 +1,18 @@
+Glossary:
+
+* Ball:
+    Player object which can be moved via keyboard input
+* Content:
+    A ContentManager that manages streaming, loading and unloading the graphical assets. The location of
+    the content is decided by Content's RootDirectory variable.
+* Game:
+    The default class for creating a game
+* GraphicsDeviceManager:
+    Pre-made class that handles the window in which the game is displayed
+* IsMouseVisible:
+    Pre-defined variable in the Game class that decides whether the cursor is or is not visible when the
+    game is running
+* Science:
+    Collectibe object which is "collected" upon colliding with Ball and disappears after impact
+* SpriteBatch:
+    Pre-made class which handles the graphical output of the objects' sprites

@@ -4,8 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/Content/ball-pixel.png</File>
-    <File>C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/Content/science-pixel.png</File>
+    <File>/home/sassan/Dropbox/Galaxify/Content/ball-pixel.png</File>
+    <File>/home/sassan/Dropbox/Galaxify/Content/science-pixel.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

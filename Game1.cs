@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Content.obj;
@@ -9,20 +8,33 @@ namespace TestGame;
 
 public class Game1 : Game
 {
+    //  Object definition:
+    //  *   Ball
+    //  *   Science
     private Ball _ball;
     private Science _science;
 
+    //  Required variable definition:
+    //  *   SpriteBatch
     private SpriteBatch _spriteBatch;
 
+    // Class initializer
+    // Initializes:
+    // *    graphics
+    // *    Content.RootDirectory
+    // *    IsMouseVisible
     public Game1()
     {
-        var graphics = new GraphicsDeviceManager(this);
-        graphics.PreferredBackBufferWidth = ResolutionWidth;
-        graphics.PreferredBackBufferHeight = ResolutionHeight;
+        var graphics = new GraphicsDeviceManager(this)
+        {
+            PreferredBackBufferWidth = ResolutionWidth,
+            PreferredBackBufferHeight = ResolutionHeight
+        };
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
 
+    // Object initi
     protected override void Initialize()
     {
         InitBall();

@@ -1,55 +1,83 @@
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\TestGame.exe
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\TestGame.deps.json
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\TestGame.runtimeconfig.json
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\TestGame.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\TestGame.pdb
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\MonoGame.Framework.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.csproj.AssemblyReference.cache
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.AssemblyInfoInputs.cache
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.AssemblyInfo.cs
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.csproj.CoreCompileInputs.cache
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.csproj.CopyComplete
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\refint\TestGame.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.pdb
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\TestGame.genruntimeconfig.cache
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\obj\Debug\net6.0\ref\TestGame.dll
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\Content\ball-pixel.xnb
-C:\Users\sassan.zomorodi\Documents\Monogame\TestProject\TestGame\bin\Debug\net6.0\Content\science-pixel.xnb
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\Content\ball-pixel.xnb
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\Content\science-pixel.xnb
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\TestGame.exe
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\TestGame.deps.json
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\TestGame.runtimeconfig.json
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\TestGame.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\TestGame.pdb
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\MonoGame.Framework.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.csproj.AssemblyReference.cache
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.AssemblyInfoInputs.cache
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.AssemblyInfo.cs
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.csproj.CoreCompileInputs.cache
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.sourcelink.json
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.csproj.Up2Date
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\refint\TestGame.dll
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.pdb
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\TestGame.genruntimeconfig.cache
-C:\Users\zomossas\OneDrive - Tietoevry\Documents\GitHub\Galaxify\obj\Debug\net6.0\ref\TestGame.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/TestGame.exe
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/TestGame.deps.json
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/TestGame.runtimeconfig.json
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/TestGame.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/TestGame.pdb
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/MonoGame.Framework.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/linux-x64/native/libopenal.so.1
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/osx/native/libSDL2.dylib
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/osx/native/libopenal.1.dylib
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/win-x64/native/SDL2.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/win-x64/native/soft_oal.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/win-x86/native/SDL2.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/runtimes/win-x86/native/soft_oal.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.csproj.AssemblyReference.cache
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.AssemblyInfoInputs.cache
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.AssemblyInfo.cs
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.csproj.CoreCompileInputs.cache
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.csproj.CopyComplete
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/refint/TestGame.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.pdb
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/TestGame.genruntimeconfig.cache
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/obj/Debug/net6.0/ref/TestGame.dll
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/Content/ball-pixel.xnb
+C:/Users/sassan.zomorodi/Documents/Monogame/TestProject/TestGame/bin/Debug/net6.0/Content/science-pixel.xnb
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/Content/ball-pixel.xnb
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/Content/science-pixel.xnb
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/TestGame.exe
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/TestGame.deps.json
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/TestGame.runtimeconfig.json
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/TestGame.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/TestGame.pdb
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/MonoGame.Framework.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/linux-x64/native/libopenal.so.1
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/osx/native/libSDL2.dylib
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/osx/native/libopenal.1.dylib
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/win-x64/native/SDL2.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/win-x64/native/soft_oal.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/win-x86/native/SDL2.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/bin/Debug/net6.0/runtimes/win-x86/native/soft_oal.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.csproj.AssemblyReference.cache
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.AssemblyInfoInputs.cache
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.AssemblyInfo.cs
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.csproj.CoreCompileInputs.cache
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.sourcelink.json
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.csproj.Up2Date
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/refint/TestGame.dll
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.pdb
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/TestGame.genruntimeconfig.cache
+C:/Users/zomossas/OneDrive - Tietoevry/Documents/GitHub/Galaxify/obj/Debug/net6.0/ref/TestGame.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/Content/ball-pixel.xnb
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/Content/science-pixel.xnb
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/TestGame
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/TestGame.deps.json
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/TestGame.runtimeconfig.json
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/TestGame.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/TestGame.pdb
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/MonoGame.Framework.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/linux-x64/native/libopenal.so.1
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/osx/native/libSDL2.dylib
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/osx/native/libopenal.1.dylib
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/win-x64/native/SDL2.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/win-x64/native/soft_oal.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/win-x86/native/SDL2.dll
+/home/sassan/Dropbox/Galaxify/bin/Debug/net6.0/runtimes/win-x86/native/soft_oal.dll
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.csproj.AssemblyReference.cache
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.GeneratedMSBuildEditorConfig.editorconfig
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.AssemblyInfoInputs.cache
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.AssemblyInfo.cs
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.csproj.CoreCompileInputs.cache
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.sourcelink.json
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.csproj.Up2Date
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.dll
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/refint/TestGame.dll
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.pdb
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/TestGame.genruntimeconfig.cache
+/home/sassan/Dropbox/Galaxify/obj/Debug/net6.0/ref/TestGame.dll
